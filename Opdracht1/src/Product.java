@@ -16,7 +16,7 @@ public class Product {
 
     public String toString() {
         String formatprice = "";
-        if (price==0.0) {return "Naam: " + name + "\nPrijs: Onbepaald";}
-        else {return "Naam: " + name + "\nPrijs: €" + price;}
+        if (price==0.0) {return "Productnaam: " + name + "\nProductprijs: Onbepaald\n";}
+        else {return "Productnaam: " + name + "\nProductprijs: €" + price + "\n";}
     }
 }

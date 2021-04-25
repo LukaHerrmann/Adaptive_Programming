@@ -1,20 +1,23 @@
 public class Buyer {
     private String name;
-    private Adress deliveryAdress;
+    private Address deliveryAdress;
 
     public Buyer(String nm) {
         name = nm;
     }
 
-    public void setDeliveryAdress(Adress deliveryAdress) {
+    public void setDeliveryAdress(Address deliveryAdress) {
         this.deliveryAdress = deliveryAdress;
     }
 
-    public Adress getDeliveryAdress() {
+    public Address getDeliveryAdress() {
         return deliveryAdress;
     }
 
     public String toString() {
-        return "Gekocht door: " + name + ", kan afgeleverd worden op: \n" + deliveryAdress.toString();
+        String adressstring = "";
+        if (deliveryAdress==null) {adressstring="Geen adres gedefinieerd\n";}
+        else {adressstring=deliveryAdress.toString();}
+        return "Gekocht door: " + name + ", kan afgeleverd worden op: \n" + adressstring;
     }
 }

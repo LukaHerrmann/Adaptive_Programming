@@ -1,20 +1,23 @@
 public class Seller {
     private String name;
-    private Adress returnAdress;
+    private Address returnAdress;
 
     public Seller(String nm) {
         name = nm;
     }
 
-    public void setReturnAdress(Adress returnAdress) {
+    public void setReturnAdress(Address returnAdress) {
         this.returnAdress = returnAdress;
     }
 
-    public Adress getReturnAdress() {
+    public Address getReturnAdress() {
         return returnAdress;
     }
 
     public String toString() {
-        return "Verkocht door: " + name + ", kan gereturnd worden naar: \n" + returnAdress.toString();
+        String adressstring = "";
+        if (returnAdress==null) {adressstring="Geen adres gedefinieerd\n";}
+        else {adressstring=returnAdress.toString();}
+        return "Verkocht door: " + name + ", kan gereturnd worden naar: \n" + adressstring;
     }
 }
