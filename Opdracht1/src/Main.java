@@ -9,5 +9,9 @@ public class Main {
         s1.setReturnAdress(adr1);
         System.out.println(b1);
         System.out.println(s1);
+
+        Product p1 = new Product("broodje");
+        p1.setPrice(10.69);
+        System.out.println(p1);
     }
 }
